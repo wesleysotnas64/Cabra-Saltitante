@@ -56,28 +56,4 @@ public class PlayerController : MonoBehaviour
         Jump(1);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        int l = col.gameObject.layer;
-
-        switch(l)
-        {
-            case 6: //Rock
-                onRock = true;
-                break;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        int l = other.gameObject.layer;
-
-        switch (l)
-        {
-            case 6: //Rock
-                onRock = false;
-                break;
-        }
-    }
-
 }
